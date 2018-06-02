@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
+    public GameObject OverlayPanel;
     public GameObject ModalPanel;
     public InputField UsernameInputField;
 
@@ -13,12 +14,14 @@ public class Menu : MonoBehaviour {
     {
         Debug.Log("Play Button Click");
         PlayerPrefs.DeleteAll();
+        OverlayPanel.gameObject.SetActive(true);
         ModalPanel.gameObject.SetActive(true);
         UsernameInputField.Select();
     }
 
     public void OkButtonOnClick()
     {
+        OverlayPanel.gameObject.SetActive(false);
         ModalPanel.gameObject.SetActive(false);
 
         // PlayerPrefs 세팅
@@ -37,6 +40,7 @@ public class Menu : MonoBehaviour {
 
     public void CancelButtonOnClick()
     {
+        OverlayPanel.gameObject.SetActive(false);
         ModalPanel.gameObject.SetActive(false);
     }
 
