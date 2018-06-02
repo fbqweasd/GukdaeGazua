@@ -617,8 +617,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 887843088}
-        m_MethodName: JobButton
+      - m_Target: {fileID: 1208594615}
+        m_MethodName: JobButtonOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -751,8 +751,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971035025}
-        m_MethodName: StoreButton
+      - m_Target: {fileID: 1208594615}
+        m_MethodName: StoreButtonOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -885,8 +885,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035363866}
-        m_MethodName: ContestButton
+      - m_Target: {fileID: 1208594615}
+        m_MethodName: ContestButtonOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1019,8 +1019,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1118159405}
-        m_MethodName: TrainingButton
+      - m_Target: {fileID: 1208594615}
+        m_MethodName: TrainingButtonOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1354,8 +1354,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1235348945}
-        m_MethodName: RestButton
+      - m_Target: {fileID: 1208594615}
+        m_MethodName: RestButtonOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

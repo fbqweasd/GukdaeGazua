@@ -24,4 +24,24 @@ public class Main : MonoBehaviour {
     {
         SceneManager.LoadScene("Scenes/Training");
     }
+
+    public void RestButtonOnClick()
+    {
+        SceneManager.LoadScene("Scenes/Rest");
+    }
+
+    public void ContestButtonOnClick()
+    {
+        SceneManager.LoadScene("Scenes/Contest");
+    }
+
+    public void StoreButtonOnClick()
+    {
+        SceneManager.LoadScene("Scenes/Store");
+    }
+
+    public void JobButtonOnClick()
+    {
+        SceneManager.LoadScene("Scenes/Job");
+    }
 }
