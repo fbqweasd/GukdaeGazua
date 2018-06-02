@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class EscKeyEevent : MonoBehaviour {
+public class EscKeyEventMain : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +15,7 @@ public class EscKeyEevent : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                SceneManager.LoadScene("Scenes/Main");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/Menu");
             }
         }
     }
