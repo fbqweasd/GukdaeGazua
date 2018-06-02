@@ -9,7 +9,7 @@ public enum Result{
 }
 
 public class NewBehaviourScript : MonoBehaviour {
-    Result result;
+    Result result = 0;
 
 	// Use this for initialization
 	void Start () {
