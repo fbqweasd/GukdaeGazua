@@ -13,23 +13,23 @@ public class MainCategory : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void TrainingClick(){
+    public void TrainingOnClick(){
         // 메인 카테고리에서 훈련을 클릭했을때
 
     }
-    public void RestClick(){
+    public void RestOnClick(){
         // 메인 카테고리에서 훈련을 클릭했을때
 
     }
-    public void StoreClick(){
+    public void StoreOnClick(){
         // 메인 카테고리에서 훈련을 클릭했을때
 
     }
-    public void JobClick(){
+    public void JobOnClick(){
         // 메인 카테고리에서 훈련을 클릭했을때
 
     }
-    public void ContestClick(){
+    public void ContestOnClick(){
         // 메인 카테고리에서 훈련을 클릭했을때
 
     }

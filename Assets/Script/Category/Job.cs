@@ -12,11 +12,12 @@ public class Job : MonoBehaviour {
 	void Update () {
 		
 	}
-    void StoreClick(){
+    public void StoreOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
         PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 7530);
     }
-    void TutoringClick(){
+    public void TutoringOnClick(){
+        
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
         PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 10000);
     }

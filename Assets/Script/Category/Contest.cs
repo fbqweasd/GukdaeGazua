@@ -19,7 +19,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void OlympicClick(){
+    public void OlympicOnClick(){
 
         switch(result){
             case Result.GOLD:
@@ -34,7 +34,7 @@ public class NewBehaviourScript : MonoBehaviour {
         }
 
     }
-    void TeenagerOlympicClick(){
+    public void TeenagerOlympicOnClick(){
         switch (result)
         {
             case Result.GOLD:
@@ -49,7 +49,7 @@ public class NewBehaviourScript : MonoBehaviour {
         }
         
     }
-    void FriendshipClick(){
+    public void FriendshipOnClick(){
         switch (result)
         {
             case Result.GOLD:
