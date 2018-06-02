@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 3c875a5286e9c34418b61a5af1a6f1dd
+  - enabled: 1
+    path: Assets/Scenes/Training.unity
+    guid: 46ef7f05bbcfd7542bccaea3af61783f
+  - enabled: 1
+    path: Assets/Scenes/Contest.unity
+    guid: 15a17ce163565f943a58f50f24acd471
+  - enabled: 1
+    path: Assets/Scenes/Job.unity
+    guid: 60bf06b896a6a4027aeab4bbcf6f4acb
+  - enabled: 1
+    path: Assets/Scenes/Rest.unity
+    guid: 7ff03ce46b59d4cf68474ccee4023e53
+  - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: 29a28026101ab4ba6877bef2505b75d7
   m_configObjects: {}
