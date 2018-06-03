@@ -14,10 +14,10 @@ public class Store : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void EquipmentOnClick(){
+    public void EquipmentButtonOnClick(){
         PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 70000);
     }
-    public void FoodOnClick(){
+    public void FoodButtonOnClick(){
         PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 30000);
     }
 }

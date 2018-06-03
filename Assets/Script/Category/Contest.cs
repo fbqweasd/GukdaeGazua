@@ -8,7 +8,7 @@ public enum Result{
     BRONZE
 }
 
-public class NewBehaviourScript : MonoBehaviour {
+public class Contest : MonoBehaviour {
     Result result = 0;
 
 	// Use this for initialization
@@ -19,7 +19,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void OlympicOnClick(){
+    public void OlympicButtonOnClick(){
 
         switch(result){
             case Result.GOLD:
@@ -34,7 +34,7 @@ public class NewBehaviourScript : MonoBehaviour {
         }
 
     }
-    public void TeenagerOlympicOnClick(){
+    public void TeenagerOlympicButtonOnClick(){
         switch (result)
         {
             case Result.GOLD:
@@ -49,7 +49,7 @@ public class NewBehaviourScript : MonoBehaviour {
         }
         
     }
-    public void FriendshipOnClick(){
+    public void FriendshipButtonOnClick(){
         switch (result)
         {
             case Result.GOLD:
