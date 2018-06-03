@@ -14,7 +14,7 @@ public class Training : MonoBehaviour {
 		
 	}
 
-   public void PushUpOnClick(){
+   public void PushUpButtonOnClick(){
         PlayerPrefs.SetInt("time",PlayerPrefs.GetInt("time") - 10);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue")+3);
         PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 4);
@@ -23,7 +23,7 @@ public class Training : MonoBehaviour {
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 4);
     }
 
-    public void SitUpOnClick(){
+    public void SitUpButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 10);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 3);
         PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 4);
@@ -31,7 +31,7 @@ public class Training : MonoBehaviour {
         PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 3);
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 5);
     }
-    public void JumplopeOnClick(){
+    public void JumpRopeButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 30);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 5);
         PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 7);
@@ -39,7 +39,7 @@ public class Training : MonoBehaviour {
         PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 2);
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 6);
     }
-    public void RunOnClick(){
+    public void RunButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 9);
         PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 7);
@@ -47,7 +47,7 @@ public class Training : MonoBehaviour {
         PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 1);
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 7);
     }
-    public void TaekkyonOnClick(){
+    public void TaekkyonButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 10);
         PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 2);
