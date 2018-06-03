@@ -44,6 +44,7 @@ public class Main : MonoBehaviour {
         EndBasketballModalPanel.gameObject.SetActive(false);
         EndWreslingModalPanel.gameObject.SetActive(false);
         EndFailModalPanel.gameObject.SetActive(false);
+        SceneManager.LoadScene("Scenes/Menu");
     }
 
     // Update is called once per frame
@@ -52,6 +53,11 @@ public class Main : MonoBehaviour {
         {
             OverlayPanel.gameObject.SetActive(true);
             EndFootballModalPanel.gameObject.SetActive(true);
+            return;
+        }
+        if (PlayerPrefs.GetInt("fatigue") <= 0)
+        {
+            FatigueText.text = "0";
         }
         TimeText.text = PlayerPrefs.GetInt("time") + "분";
         FatigueText.text = PlayerPrefs.GetInt("fatigue").ToString();
