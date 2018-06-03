@@ -26,12 +26,13 @@ public class Menu : MonoBehaviour {
 
         // PlayerPrefs 세팅
         PlayerPrefs.SetString("username", UsernameInputField.text);
-        PlayerPrefs.SetInt("time", 7884000);
+        PlayerPrefs.SetInt("time", 1050000);
         PlayerPrefs.SetInt("fatigue", 0);
         PlayerPrefs.SetInt("health", 40);
         PlayerPrefs.SetInt("flexibility", 5);
         PlayerPrefs.SetInt("power", 10);
         PlayerPrefs.SetInt("endurance", 5);
+        PlayerPrefs.SetInt("money", 40000);
 
         Debug.Log(PlayerPrefs.GetString("username"));
 

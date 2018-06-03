@@ -16,11 +16,11 @@ public class Rest : MonoBehaviour {
 	}
     public void EatButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
-        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") - 7);
+        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") - 20);
     }
     public void SleepButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 420);
-        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") - 40);
+        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") - 70);
     }
     public void EnergyDrinkButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 5);

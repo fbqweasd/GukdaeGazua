@@ -9,27 +9,24 @@ public enum Result{
 }
 
 public class Contest : MonoBehaviour {
-    Result result = 0;
+    Result result = Result.SILVER;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
     public void OlympicButtonOnClick(){
-
         switch(result){
             case Result.GOLD:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 1000000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 200);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 100000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 100000);
                 break;
             case Result.SILVER:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 800000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 200);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 100000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 80000);
                 break;
             case Result.BRONZE:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 500000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 200);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 100000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 50000);
                 break;
         }
 
@@ -38,13 +35,19 @@ public class Contest : MonoBehaviour {
         switch (result)
         {
             case Result.GOLD:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 700000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 160);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 80000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 70000);
                 break;
             case Result.SILVER:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 500000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 160);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 80000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 50000);
                 break;
             case Result.BRONZE:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 300000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 160);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 80000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 30000);
                 break;
         }
         
@@ -53,10 +56,14 @@ public class Contest : MonoBehaviour {
         switch (result)
         {
             case Result.GOLD:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 300000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 130);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 70000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 30000);
                 break;
             case Result.SILVER:
-                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 100000);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("fatigue") + 130);
+                PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 70000);
+                PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") + 20000);
                 break;
         }
         

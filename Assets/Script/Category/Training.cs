@@ -3,57 +3,88 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Training : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject OverlayPanel;
+    public GameObject FatigueModalPanel;
 
    public void PushUpButtonOnClick(){
-        PlayerPrefs.SetInt("time",PlayerPrefs.GetInt("time") - 10);
-        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue")+3);
-        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 4);
+        if (PlayerPrefs.GetInt("fatigue") + 10 > PlayerPrefs.GetInt("health"))
+        {
+            OverlayPanel.gameObject.SetActive(true);
+            FatigueModalPanel.gameObject.SetActive(true);
+            return;
+        }
+
+        PlayerPrefs.SetInt("time",PlayerPrefs.GetInt("time") - 30);
+        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue")+10);
+        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 7);
         PlayerPrefs.SetInt("flexibility", PlayerPrefs.GetInt("flexibility") + 4);
         PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 5);
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 4);
     }
 
     public void SitUpButtonOnClick(){
-        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 10);
-        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 3);
-        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 4);
+        if (PlayerPrefs.GetInt("fatigue") + 10 > PlayerPrefs.GetInt("health"))
+        {
+            OverlayPanel.gameObject.SetActive(true);
+            FatigueModalPanel.gameObject.SetActive(true);
+            return;
+        }
+
+        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 30);
+        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 10);
+        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 7);
         PlayerPrefs.SetInt("flexibility", PlayerPrefs.GetInt("flexibility") + 5);
         PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 3);
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 5);
     }
     public void JumpRopeButtonOnClick(){
-        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 30);
-        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 5);
-        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 7);
+        if (PlayerPrefs.GetInt("fatigue") + 20 > PlayerPrefs.GetInt("health"))
+        {
+            OverlayPanel.gameObject.SetActive(true);
+            FatigueModalPanel.gameObject.SetActive(true);
+            return;
+        }
+
+        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
+        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 20);
+        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 10);
         PlayerPrefs.SetInt("flexibility", PlayerPrefs.GetInt("flexibility") + 3);
         PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 2);
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 6);
     }
     public void RunButtonOnClick(){
-        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
-        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 9);
-        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 7);
+        if (PlayerPrefs.GetInt("fatigue") + 30 > PlayerPrefs.GetInt("health"))
+        {
+            OverlayPanel.gameObject.SetActive(true);
+            FatigueModalPanel.gameObject.SetActive(true);
+            return;
+        }
+
+        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 90);
+        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 30);
+        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 15);
         PlayerPrefs.SetInt("flexibility", PlayerPrefs.GetInt("flexibility") + 1);
-        PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 1);
-        PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 7);
+        PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 2);
+        PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 10);
     }
     public void TaekkyonButtonOnClick(){
-        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
-        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 10);
-        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 2);
-        PlayerPrefs.SetInt("flexibility", PlayerPrefs.GetInt("flexibility") + 10);
-        PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 1);
+        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 90);
+        PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") + 40);
+        PlayerPrefs.SetInt("health", PlayerPrefs.GetInt("health") + 5);
+        PlayerPrefs.SetInt("flexibility", PlayerPrefs.GetInt("flexibility") + 12);
+        PlayerPrefs.SetInt("power", PlayerPrefs.GetInt("power") + 3);
         PlayerPrefs.SetInt("endurance", PlayerPrefs.GetInt("endurance") + 1);
     }
 
+    public void TimeOver()
+    {
+        OverlayPanel.gameObject.SetActive(true);
+        FatigueModalPanel.gameObject.SetActive(true);
+    }
+
+    public void OkButtonOnClick()
+    {
+        OverlayPanel.gameObject.SetActive(false);
+        FatigueModalPanel.gameObject.SetActive(false);
+    }
 }

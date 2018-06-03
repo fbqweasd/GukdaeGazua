@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class Store : MonoBehaviour {
 
+    public GameObject OverlayPanel;
+    public GameObject ModalPanel;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
     public void EquipmentButtonOnClick(){
-        PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 70000);
+        if (PlayerPrefs.GetInt("money") - 70000 < 0)
+        {
+            OverlayPanel.gameObject.SetActive(true);
+            ModalPanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 70000);
+        }
     }
+
     public void FoodButtonOnClick(){
-        PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 30000);
+        if (PlayerPrefs.GetInt("money") - 30000 < 0)
+        {
+            OverlayPanel.gameObject.SetActive(true);
+            ModalPanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 30000);
+        }
+    }
+
+    public void OkButtonOnClick()
+    {
+        OverlayPanel.gameObject.SetActive(false);
+        ModalPanel.gameObject.SetActive(false);
     }
 }

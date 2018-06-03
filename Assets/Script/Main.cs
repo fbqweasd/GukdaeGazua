@@ -7,30 +7,60 @@ using System.Timers;
 
 public class Main : MonoBehaviour {
 
-    private void Timer_Elapsed(object sender, ElapsedEventArgs e)
-    {
-        PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 1);
-    }
-
-
+    public GameObject OverlayPanel;
+    public GameObject EndFootballModalPanel;
+    public GameObject EndBaseballModalPanel;
+    public GameObject EndBasketballModalPanel;
+    public GameObject EndWreslingModalPanel;
+    public GameObject EndFailModalPanel;
+    public Text FatigueText;
+    public Text HealthText;
+    public Text FlexibilityText;
+    public Text PowerText;
+    public Text EnduranceText;
+    public Text MoneyText;
     public Text UsernameText;
     public Text TimeText;
     public Timer timer;
 
     // Use this for initialization
     void Start () {
-
-        timer = new System.Timers.Timer(1000);
-        timer.Elapsed += Timer_Elapsed;
-        timer.Enabled = true;
         UsernameText.text = PlayerPrefs.GetString("username");
         TimeText.text = PlayerPrefs.GetInt("time") + "분";
+
+        FatigueText.text = PlayerPrefs.GetInt("fatigue").ToString();
+        HealthText.text = PlayerPrefs.GetInt("health").ToString();
+        FlexibilityText.text = PlayerPrefs.GetInt("flexibility").ToString();
+        PowerText.text = PlayerPrefs.GetInt("power").ToString();
+        EnduranceText.text = PlayerPrefs.GetInt("endurance").ToString();
+        MoneyText.text = PlayerPrefs.GetInt("money").ToString();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void OkButtonOnClick()
+    {
+        OverlayPanel.gameObject.SetActive(false);
+        EndFootballModalPanel.gameObject.SetActive(false);
+        EndBaseballModalPanel.gameObject.SetActive(false);
+        EndBasketballModalPanel.gameObject.SetActive(false);
+        EndWreslingModalPanel.gameObject.SetActive(false);
+        EndFailModalPanel.gameObject.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (PlayerPrefs.GetInt("time") <= 0)
+        {
+            OverlayPanel.gameObject.SetActive(true);
+            EndFootballModalPanel.gameObject.SetActive(true);
+        }
+        TimeText.text = PlayerPrefs.GetInt("time") + "분";
+        FatigueText.text = PlayerPrefs.GetInt("fatigue").ToString();
+        HealthText.text = PlayerPrefs.GetInt("health").ToString();
+        FlexibilityText.text = PlayerPrefs.GetInt("flexibility").ToString();
+        PowerText.text = PlayerPrefs.GetInt("power").ToString();
+        EnduranceText.text = PlayerPrefs.GetInt("endurance").ToString();
+        MoneyText.text = PlayerPrefs.GetInt("money").ToString();
+    }
 
     public void TrainingButtonOnClick()
     {
