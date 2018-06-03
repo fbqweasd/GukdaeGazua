@@ -14,15 +14,15 @@ public class Rest : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void EatOnClick(){
+    public void EatButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 60);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") - 7);
     }
-    public void SleepOnClick(){
+    public void SleepButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 420);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") - 40);
     }
-    public void EnergyDrinkOnClick(){
+    public void EnergyDrinkButtonOnClick(){
         PlayerPrefs.SetInt("time", PlayerPrefs.GetInt("time") - 5);
         PlayerPrefs.SetInt("fatigue", PlayerPrefs.GetInt("fatigue") - 3);
     }
